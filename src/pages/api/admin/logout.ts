@@ -1,4 +1,4 @@
-import { clearAdminSessionCookie } from '@/libs/adminSession'
+import { clearAdminSessionCookie } from "@/libs/adminSession"
 
 export async function POST() {
 	const cookie = clearAdminSessionCookie()
@@ -6,8 +6,7 @@ export async function POST() {
 	return new Response(null, {
 		status: 204,
 		headers: {
-			'Set-Cookie': cookie,
+			"Set-Cookie": cookie,
 		},
 	})
 }
-

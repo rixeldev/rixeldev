@@ -6,11 +6,11 @@ description: Patrones pragmáticos de Astro y Supabase para productos pequeños,
 lang: es
 pageTitle: patrones-supabase-astro
 tags:
-    - astro
-    - supabase
-    - postgres
-    - arquitectura
-    - web
+  - astro
+  - supabase
+  - postgres
+  - arquitectura
+  - web
 timestamp: 24/Aug/2026
 title: "Astro + Supabase: patrones pragmáticos para productos pequeños"
 translationKey: supabase-astro
@@ -26,14 +26,12 @@ Si tu app de Astro necesita acceso privilegiado, crea el cliente de Supabase en 
 let client: SupabaseClient | null = null
 
 export function getSupabaseService() {
-	if (!client) {
-		client = createClient(
-			import.meta.env.SUPABASE_URL,
-			import.meta.env.SUPABASE_SERVICE_ROLE_KEY,
-			{ auth: { persistSession: false, autoRefreshToken: false } }
-		)
-	}
-	return client
+  if (!client) {
+    client = createClient(import.meta.env.SUPABASE_URL, import.meta.env.SUPABASE_SERVICE_ROLE_KEY, {
+      auth: { persistSession: false, autoRefreshToken: false },
+    })
+  }
+  return client
 }
 ```
 

@@ -6,11 +6,11 @@ description: "Una guía práctica de las islas de Astro: cuándo una página nec
 lang: es
 pageTitle: islas-astro-hidratacion-parcial
 tags:
-    - astro
-    - javascript
-    - performance
-    - desarrollo web
-    - architecture
+  - astro
+  - javascript
+  - performance
+  - desarrollo web
+  - architecture
 timestamp: 14/Oct/2026
 title: "Islas de Astro: la guía práctica de la hidratación parcial"
 translationKey: astro-islands-partial-hydration
@@ -32,12 +32,12 @@ El momento en que agregas `client:load` a algo, lo pagas tres veces:
 
 ## Las cuatro directivas de hidratación
 
-| Directiva | Cuándo se ejecuta | Úsala para |
-| --- | --- | --- |
-| `client:load` | Inmediatamente | Widgets que deben ser interactivos en el primer pintado |
-| `client:idle` | Cuando el navegador está libre | Todo lo que está bajo el pliegue, todo lo no urgente |
-| `client:visible` | Cuando entra en el viewport | Componentes pesados muy abajo en la página |
-| `client:media` | Cuando coincide una media query | Funciones solo de móvil o solo de escritorio |
+| Directiva        | Cuándo se ejecuta               | Úsala para                                              |
+| ---------------- | ------------------------------- | ------------------------------------------------------- |
+| `client:load`    | Inmediatamente                  | Widgets que deben ser interactivos en el primer pintado |
+| `client:idle`    | Cuando el navegador está libre  | Todo lo que está bajo el pliegue, todo lo no urgente    |
+| `client:visible` | Cuando entra en el viewport     | Componentes pesados muy abajo en la página              |
+| `client:media`   | Cuando coincide una media query | Funciones solo de móvil o solo de escritorio            |
 
 El error que más veo es usar `client:load` por costumbre. Casi todas esas islas solo necesitan ser interactivas cuando el usuario llega hasta ellas, lo cual es `client:visible` o `client:idle`.
 
@@ -71,7 +71,7 @@ Quieres que el total de JS se mantenga pequeño en las páginas de contenido. Si
 
 ## Una regla práctica
 
-Pregunta: *¿la próxima acción del usuario requiere JavaScript?*
+Pregunta: _¿la próxima acción del usuario requiere JavaScript?_
 
 - Si sí, y está sobre el pliegue, hazlo una isla con `client:load`.
 - Si sí, y está bajo el pliegue, usa `client:visible`.

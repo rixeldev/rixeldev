@@ -6,11 +6,11 @@ description: "Lo que aprendí publicando dos apps Android independientes en Goog
 lang: es
 pageTitle: publicar-una-app-en-google-play
 tags:
-    - android
-    - google play
-    - release
-    - product
-    - react native
+  - android
+  - google play
+  - release
+  - product
+  - react native
 timestamp: 9/Oct/2026
 title: "Publicar una app Android en Google Play: lo que aprendí publicando dos"
 translationKey: building-a-google-play-app

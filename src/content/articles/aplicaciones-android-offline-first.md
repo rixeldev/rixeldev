@@ -6,11 +6,11 @@ description: "Qué significa realmente el enfoque offline-first en una app React
 lang: es
 pageTitle: aplicaciones-android-offline-first
 tags:
-    - react native
-    - offline
-    - sync
-    - mobile
-    - architecture
+  - react native
+  - offline
+  - sync
+  - mobile
+  - architecture
 timestamp: 18/Oct/2026
 title: "Apps Android offline-first: sincronizar sin señal"
 translationKey: offline-first-android-apps
@@ -45,29 +45,29 @@ Esto es deliberadamente aburrido. Un CRDT manejaría más casos, pero una app de
 type SyncResult = { pushed: string[]; pulled: string[]; failed: string[] }
 
 async function syncBand(bandId: string): Promise<SyncResult> {
-	const pending = await local.dirtyRows(bandId)
-	const pushed: string[] = []
-	const failed: string[] = []
+  const pending = await local.dirtyRows(bandId)
+  const pushed: string[] = []
+  const failed: string[] = []
 
-	for (const row of pending) {
-		try {
-			await remote.upsert(row)
-			await local.markClean(row.id)
-			pushed.push(row.id)
-		} catch (error) {
-			failed.push(row.id)
-		}
-	}
+  for (const row of pending) {
+    try {
+      await remote.upsert(row)
+      await local.markClean(row.id)
+      pushed.push(row.id)
+    } catch (error) {
+      failed.push(row.id)
+    }
+  }
 
-	const cursor = await local.getCursor(bandId)
-	const changes = await remote.changesSince(bandId, cursor)
+  const cursor = await local.getCursor(bandId)
+  const changes = await remote.changesSince(bandId, cursor)
 
-	for (const change of changes) {
-		await local.applyServerCopy(change)
-	}
+  for (const change of changes) {
+    await local.applyServerCopy(change)
+  }
 
-	await local.setCursor(bandId, changes.cursor)
-	return { pushed, pulled: changes.ids, failed }
+  await local.setCursor(bandId, changes.cursor)
+  return { pushed, pulled: changes.ids, failed }
 }
 ```
 
@@ -82,7 +82,7 @@ El detalle importante es que `applyServerCopy` se niega a sobrescribir una fila 
 
 ## La parte visible para el usuario
 
-Nada de esto debería verse. El indicador de estado responde exactamente una pregunta: *¿mi trabajo ya está a salvo?*
+Nada de esto debería verse. El indicador de estado responde exactamente una pregunta: _¿mi trabajo ya está a salvo?_
 
 ```
 ● Sincronizado · ahora mismo

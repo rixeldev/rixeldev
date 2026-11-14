@@ -6,11 +6,11 @@ description: "What I learned shipping two independent Android apps to Google Pla
 lang: en
 pageTitle: building-a-google-play-app
 tags:
-    - android
-    - google play
-    - release
-    - product
-    - react native
+  - android
+  - google play
+  - release
+  - product
+  - react native
 timestamp: 9/Oct/2026
 title: "Shipping an Android app to Google Play: what I learned shipping two of them"
 translationKey: building-a-google-play-app

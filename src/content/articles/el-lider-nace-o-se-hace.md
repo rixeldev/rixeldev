@@ -6,16 +6,15 @@ description: Esa es una pregunta muy polémica en el mundo que vivimos. Podríam
 lang: es
 pageTitle: el-lider-nace-o-se-hace
 tags:
-    - líder
-    - liderazgo
-    - empresas 
-    - avance
+  - líder
+  - liderazgo
+  - empresas
+  - avance
 timestamp: 10/Jul/2024,
 title: ¿El líder nace o se hace?
 ---
 
 Esa es una pregunta muy polémica en el mundo que vivimos. Podríamos decir tanto que un líder nace, como que se hace. Para contestar a la cuestión debemos de mirarla desde diferentes perspectivas, ya que de esta manera nos daremos cuenta si el líder nace o se hace en un área específica, no de manera global.
-
 
 ## ¿Una persona puede tener de manera nata/innata el don del liderazgo?
 
@@ -25,13 +24,11 @@ De una persona que desde pequeña esté haciendo sonar cualquier objeto con sus 
 
 Hasta este punto podríamos determinar que un líder puede nacer con cualidades que lo identifiquen o lo cataloguen como líder desde su niñez.
 
-
 ## Ahora bien, ¿se puede formar a un líder?
 
 Muchos sostienen que los líderes se hacen a través de experiencias y formaciones humanas. Esta visión se basa en la idea de que el liderazgo es una habilidad que se puede desarrollar con el tiempo. Las experiencias de vida, la educación, y el entorno social son factores cruciales que influyen en el desarrollo del liderazgo. Programas de formación en liderazgo, la práctica de habilidades interpersonales, y la adquisición de conocimientos específicos son elementos que pueden ayudar a formar a un líder eficaz. Además, la observación y la imitación de modelos de liderazgo pueden inspirar a las personas a desarrollar sus propias capacidades de liderazgo.
 
 Fácilmente cualquiera de nosotros podría tomar clases y una formación académica para ser líder. Sin embargo, al momento de la verdad, y ante personas dotadas de esta habilidad, se podrá notar si el conocimiento adquirido fue nato, innato o formado. Bien está el dicho "La práctica hace al maestro". Aunque no nazcas con el don de ser líder, puedes practicar y adquirir dicho conocimiento o habilidad.
-
 
 ## ¿Echamos un vistazo a la historia?
 

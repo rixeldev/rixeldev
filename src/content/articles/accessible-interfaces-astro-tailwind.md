@@ -6,11 +6,11 @@ description: Practical habits for building accessible interfaces with Astro and 
 lang: en
 pageTitle: accessible-interfaces-astro-tailwind
 tags:
-    - accessibility
-    - astro
-    - tailwind
-    - ui
-    - ux
+  - accessibility
+  - astro
+  - tailwind
+  - ui
+  - ux
 timestamp: 2/Sep/2026
 title: "Building accessible interfaces with Astro and Tailwind"
 translationKey: accessible-interfaces
@@ -38,8 +38,8 @@ Removing focus outlines is the most common self-inflicted accessibility bug. Ins
 
 ```css
 :where(a, button, input, textarea, select, summary):focus-visible {
-	outline: 2px solid var(--accent);
-	outline-offset: 2px;
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 ```
 
@@ -57,9 +57,9 @@ Scroll and entrance animations should be optional. Wrap them in `prefers-reduced
 
 ```css
 @media (prefers-reduced-motion: reduce) {
-	.fade-up-anim {
-		animation: none !important;
-	}
+  .fade-up-anim {
+    animation: none !important;
+  }
 }
 ```
 

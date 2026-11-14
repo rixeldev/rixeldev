@@ -6,11 +6,11 @@ description: Pragmatic Astro and Supabase patterns for small products, from keep
 lang: en
 pageTitle: supabase-astro-patterns
 tags:
-    - astro
-    - supabase
-    - postgres
-    - architecture
-    - web
+  - astro
+  - supabase
+  - postgres
+  - architecture
+  - web
 timestamp: 24/Aug/2026
 title: "Astro + Supabase: pragmatic patterns for small products"
 translationKey: supabase-astro
@@ -26,14 +26,12 @@ If your Astro app needs privileged access, create the Supabase client on the ser
 let client: SupabaseClient | null = null
 
 export function getSupabaseService() {
-	if (!client) {
-		client = createClient(
-			import.meta.env.SUPABASE_URL,
-			import.meta.env.SUPABASE_SERVICE_ROLE_KEY,
-			{ auth: { persistSession: false, autoRefreshToken: false } }
-		)
-	}
-	return client
+  if (!client) {
+    client = createClient(import.meta.env.SUPABASE_URL, import.meta.env.SUPABASE_SERVICE_ROLE_KEY, {
+      auth: { persistSession: false, autoRefreshToken: false },
+    })
+  }
+  return client
 }
 ```
 

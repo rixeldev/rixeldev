@@ -1,13 +1,13 @@
-import { parse, serialize } from 'cookie'
-import jwt from 'jsonwebtoken'
+import { parse, serialize } from "cookie"
+import jwt from "jsonwebtoken"
 
-const SESSION_COOKIE = 'admin_session'
+const SESSION_COOKIE = "admin_session"
 const SESSION_DURATION_SECONDS = 60 * 60 * 12 // 12 hours
 
 function getSecret() {
 	const secret = import.meta.env.ADMIN_SESSION_SECRET
 	if (!secret) {
-		throw new Error('ADMIN_SESSION_SECRET is not defined in environment variables.')
+		throw new Error("ADMIN_SESSION_SECRET is not defined in environment variables.")
 	}
 	return secret
 }
@@ -23,25 +23,25 @@ export function createAdminSessionCookie(username: string) {
 
 	return serialize(SESSION_COOKIE, token, {
 		httpOnly: true,
-		path: '/',
+		path: "/",
 		maxAge: SESSION_DURATION_SECONDS,
 		secure: import.meta.env.PROD,
-		sameSite: 'lax',
+		sameSite: "lax",
 	})
 }
 
 export function clearAdminSessionCookie() {
-	return serialize(SESSION_COOKIE, '', {
+	return serialize(SESSION_COOKIE, "", {
 		httpOnly: true,
-		path: '/',
+		path: "/",
 		maxAge: 0,
 		secure: import.meta.env.PROD,
-		sameSite: 'lax',
+		sameSite: "lax",
 	})
 }
 
 export function getAdminSession(request: Request) {
-	const cookieHeader = request.headers.get('cookie')
+	const cookieHeader = request.headers.get("cookie")
 	if (!cookieHeader) return null
 
 	const cookies = parse(cookieHeader)
@@ -56,4 +56,3 @@ export function getAdminSession(request: Request) {
 		return null
 	}
 }
-

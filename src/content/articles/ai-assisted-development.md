@@ -6,11 +6,11 @@ description: How I use AI coding assistants to ship faster without sacrificing c
 lang: en
 pageTitle: ai-assisted-development
 tags:
-    - ai
-    - developer tools
-    - productivity
-    - engineering
-    - workflow
+  - ai
+  - developer tools
+  - productivity
+  - engineering
+  - workflow
 timestamp: 20/Sep/2026
 title: "AI-assisted development: shipping faster without losing craft"
 translationKey: ai-assisted-development
@@ -25,7 +25,7 @@ Here is how I try to stay on the right side of that line.
 
 - **Boilerplate with a predictable shape.** Setting up a route, a schema, or a component that follows an existing pattern.
 - **Boring refactors.** Renaming, extracting a helper, or moving logic without changing behavior.
-- **First drafts of tests.** They rarely write the test you *should* write, but they sketch the boring cases fast.
+- **First drafts of tests.** They rarely write the test you _should_ write, but they sketch the boring cases fast.
 - **Explaining unfamiliar code.** Asking "what does this function actually guarantee?" is a great use of a model.
 - **Rubber-duck debugging.** Describing a bug out loud to a model often surfaces the real cause before it answers.
 

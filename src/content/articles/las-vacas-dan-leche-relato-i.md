@@ -6,17 +6,17 @@ description: Si alguna vez te han hecho esa pregunta y con total obviedad contes
 lang: es
 pageTitle: las-vacas-dan-leche-relato-i
 tags:
-    - anciano
-    - corta
-    - fama
-    - historia
-    - joven
-    - leche
-    - moraleja
-    - relato
-    - riquezas
-    - sueños
-    - vaca
+  - anciano
+  - corta
+  - fama
+  - historia
+  - joven
+  - leche
+  - moraleja
+  - relato
+  - riquezas
+  - sueños
+  - vaca
 timestamp: 8/May/2024
 title: ¿Las Vacas Dan Leche? [Relato I]
 ---

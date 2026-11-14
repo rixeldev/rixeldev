@@ -6,11 +6,11 @@ description: Astro es un framework moderno para construir sitios web rápidos, e
 lang: es
 pageTitle: astro-framework-sitios-web-modernos
 tags:
-    - astro
-    - desarrollo web
-    - javascript
-    - rendimiento
-    - seo
+  - astro
+  - desarrollo web
+  - javascript
+  - rendimiento
+  - seo
 timestamp: 7/Jun/2026
 title: Astro, el framework ideal para sitios web modernos
 ---

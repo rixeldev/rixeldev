@@ -6,11 +6,11 @@ description: Hábitos prácticos para construir interfaces accesibles con Astro 
 lang: es
 pageTitle: interfaces-accesibles-astro-tailwind
 tags:
-    - accesibilidad
-    - astro
-    - tailwind
-    - ui
-    - ux
+  - accesibilidad
+  - astro
+  - tailwind
+  - ui
+  - ux
 timestamp: 2/Sep/2026
 title: "Interfaces accesibles con Astro y Tailwind"
 translationKey: accessible-interfaces
@@ -38,8 +38,8 @@ Quitar los contornos de foco es el error de accesibilidad más habitual y autoin
 
 ```css
 :where(a, button, input, textarea, select, summary):focus-visible {
-	outline: 2px solid var(--accent);
-	outline-offset: 2px;
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 ```
 
@@ -57,9 +57,9 @@ Las animaciones de entrada y de scroll deberían ser opcionales. Envuélvelas en
 
 ```css
 @media (prefers-reduced-motion: reduce) {
-	.fade-up-anim {
-		animation: none !important;
-	}
+  .fade-up-anim {
+    animation: none !important;
+  }
 }
 ```
 

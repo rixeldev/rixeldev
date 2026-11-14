@@ -6,11 +6,11 @@ description: "A practical guide to Astro islands: when a page needs JavaScript, 
 lang: en
 pageTitle: astro-islands-partial-hydration
 tags:
-    - astro
-    - javascript
-    - performance
-    - web development
-    - architecture
+  - astro
+  - javascript
+  - performance
+  - web development
+  - architecture
 timestamp: 14/Oct/2026
 title: "Astro islands: the practical guide to partial hydration"
 translationKey: astro-islands-partial-hydration
@@ -32,12 +32,12 @@ The moment you add `client:load` to something, you pay for it three times:
 
 ## The four hydration directives
 
-| Directive | When it runs | Use it for |
-| --- | --- | --- |
-| `client:load` | Immediately | Widgets that must be interactive on first paint |
-| `client:idle` | When the browser is idle | Anything below the fold, anything non-urgent |
-| `client:visible` | When it enters the viewport | Heavy components far down the page |
-| `client:media` | When a media query matches | Mobile-only or desktop-only features |
+| Directive        | When it runs                | Use it for                                      |
+| ---------------- | --------------------------- | ----------------------------------------------- |
+| `client:load`    | Immediately                 | Widgets that must be interactive on first paint |
+| `client:idle`    | When the browser is idle    | Anything below the fold, anything non-urgent    |
+| `client:visible` | When it enters the viewport | Heavy components far down the page              |
+| `client:media`   | When a media query matches  | Mobile-only or desktop-only features            |
 
 The mistake I see most often is using `client:load` out of habit. Most of those islands only need to be interactive when the user actually reaches them, which is `client:visible` or `client:idle`.
 
@@ -71,7 +71,7 @@ You want the total JS to stay small on content pages. If adding one interactive 
 
 ## A practical rule of thumb
 
-Ask: *does the user's next action require JavaScript?*
+Ask: _does the user's next action require JavaScript?_
 
 - If yes, and it is above the fold, make it an island with `client:load`.
 - If yes, and it is below the fold, use `client:visible`.

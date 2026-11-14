@@ -6,11 +6,11 @@ description: A practical, up-to-date checklist for improving Core Web Vitals, fr
 lang: en
 pageTitle: core-web-vitals-2026
 tags:
-    - performance
-    - core web vitals
-    - seo
-    - astro
-    - web
+  - performance
+  - core web vitals
+  - seo
+  - astro
+  - web
 timestamp: 12/Sep/2026
 title: "Core Web Vitals in 2026: a practical performance checklist"
 translationKey: web-performance

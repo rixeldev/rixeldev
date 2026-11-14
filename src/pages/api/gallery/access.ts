@@ -1,18 +1,18 @@
-import { findGalleryByPin, listGalleryPhotos, listGallerySelections } from '@/services/galleries'
+import { findGalleryByPin, listGalleryPhotos, listGallerySelections } from "@/services/galleries"
 
 export async function POST({ request }: { request: Request }) {
 	try {
 		const body = await request.json()
-		const pin = typeof body.pin === 'string' ? body.pin.trim() : ''
+		const pin = typeof body.pin === "string" ? body.pin.trim() : ""
 
 		if (!pin) {
-			return new Response(JSON.stringify({ message: 'PIN is required.' }), { status: 400 })
+			return new Response(JSON.stringify({ message: "PIN is required." }), { status: 400 })
 		}
 
 		const gallery = await findGalleryByPin(pin)
 
 		if (!gallery) {
-			return new Response(JSON.stringify({ message: 'Invalid PIN.' }), { status: 401 })
+			return new Response(JSON.stringify({ message: "Invalid PIN." }), { status: 401 })
 		}
 
 		const [photos, selections] = await Promise.all([
@@ -34,15 +34,14 @@ export async function POST({ request }: { request: Request }) {
 			}),
 			{
 				headers: {
-					'Content-Type': 'application/json',
+					"Content-Type": "application/json",
 				},
-			},
+			}
 		)
 	} catch (error) {
-		console.error('Error verifying gallery PIN:', error)
-		return new Response(JSON.stringify({ message: 'Unexpected error. Please try again.' }), {
+		console.error("Error verifying gallery PIN:", error)
+		return new Response(JSON.stringify({ message: "Unexpected error. Please try again." }), {
 			status: 500,
 		})
 	}
 }
-

@@ -6,11 +6,11 @@ description: Cómo uso asistentes de IA para programar sin sacrificar la calidad
 lang: es
 pageTitle: desarrollo-asistido-por-ia
 tags:
-    - ia
-    - herramientas
-    - productividad
-    - ingeniería
-    - flujo de trabajo
+  - ia
+  - herramientas
+  - productividad
+  - ingeniería
+  - flujo de trabajo
 timestamp: 20/Sep/2026
 title: "Desarrollo asistido por IA: avanzar rápido sin perder oficio"
 translationKey: ai-assisted-development
@@ -24,7 +24,7 @@ Así intento mantenerme del lado correcto de esa línea.
 
 - **Código repetitivo con forma predecible.** Crear una ruta, un esquema o un componente que sigue un patrón existente.
 - **Refactors aburridos.** Renombrar, extraer una función auxiliar o mover lógica sin cambiar el comportamiento.
-- **Primeras versiones de tests.** Rara vez escriben el test que *deberías* escribir, pero esbozan los casos obvios muy rápido.
+- **Primeras versiones de tests.** Rara vez escriben el test que _deberías_ escribir, pero esbozan los casos obvios muy rápido.
 - **Explicar código desconocido.** Preguntar "¿qué garantiza realmente esta función?" es un gran uso de un modelo.
 - **Depurar en voz alta.** Describir un bug a un modelo suele revelar la causa real antes de que responda.
 
@@ -32,7 +32,7 @@ Así intento mantenerme del lado correcto de esa línea.
 
 - **Arquitectura.** Un modelo añade con gusto una dependencia o una abstracción donde bastaba una función simple. Optimiza para el siguiente token, no para los próximos dos años.
 - **Código sensible en seguridad.** Autenticación, sesiones y todo lo que toque secretos necesitan revisión humana línea por línea.
-- **Bugs sutiles de estado.** Las condiciones de carrera y los *closures* obsoletos son justo donde el código generado se ve limpio y se comporta mal.
+- **Bugs sutiles de estado.** Las condiciones de carrera y los _closures_ obsoletos son justo donde el código generado se ve limpio y se comporta mal.
 - **Todo lo sensible a versiones.** Las APIs cambian. Una respuesta segura puede estar un año desactualizada.
 
 ## Un flujo que mantiene la calidad alta

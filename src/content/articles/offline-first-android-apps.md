@@ -6,11 +6,11 @@ description: "What offline-first really means in a React Native app, how to mode
 lang: en
 pageTitle: offline-first-android-apps
 tags:
-    - react native
-    - offline
-    - sync
-    - mobile
-    - architecture
+  - react native
+  - offline
+  - sync
+  - mobile
+  - architecture
 timestamp: 18/Oct/2026
 title: "Offline-first Android apps: syncing without a signal"
 translationKey: offline-first-android-apps
@@ -46,29 +46,29 @@ This is deliberately boring. A CRDT would handle more cases, but a band app is n
 type SyncResult = { pushed: string[]; pulled: string[]; failed: string[] }
 
 async function syncBand(bandId: string): Promise<SyncResult> {
-	const pending = await local.dirtyRows(bandId)
-	const pushed: string[] = []
-	const failed: string[] = []
+  const pending = await local.dirtyRows(bandId)
+  const pushed: string[] = []
+  const failed: string[] = []
 
-	for (const row of pending) {
-		try {
-			await remote.upsert(row)
-			await local.markClean(row.id)
-			pushed.push(row.id)
-		} catch (error) {
-			failed.push(row.id)
-		}
-	}
+  for (const row of pending) {
+    try {
+      await remote.upsert(row)
+      await local.markClean(row.id)
+      pushed.push(row.id)
+    } catch (error) {
+      failed.push(row.id)
+    }
+  }
 
-	const cursor = await local.getCursor(bandId)
-	const changes = await remote.changesSince(bandId, cursor)
+  const cursor = await local.getCursor(bandId)
+  const changes = await remote.changesSince(bandId, cursor)
 
-	for (const change of changes) {
-		await local.applyServerCopy(change)
-	}
+  for (const change of changes) {
+    await local.applyServerCopy(change)
+  }
 
-	await local.setCursor(bandId, changes.cursor)
-	return { pushed, pulled: changes.ids, failed }
+  await local.setCursor(bandId, changes.cursor)
+  return { pushed, pulled: changes.ids, failed }
 }
 ```
 
@@ -83,7 +83,7 @@ The important detail is that `applyServerCopy` refuses to overwrite a row that i
 
 ## The user-facing part
 
-None of this should be visible. The status indicator answers exactly one question: *is my work safe yet?*
+None of this should be visible. The status indicator answers exactly one question: _is my work safe yet?_
 
 ```
 ● Synced · just now

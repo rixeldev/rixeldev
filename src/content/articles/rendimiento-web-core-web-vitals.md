@@ -6,11 +6,11 @@ description: Una checklist práctica y actualizada para mejorar las Core Web Vit
 lang: es
 pageTitle: rendimiento-web-core-web-vitals
 tags:
-    - rendimiento
-    - core web vitals
-    - seo
-    - astro
-    - web
+  - rendimiento
+  - core web vitals
+  - seo
+  - astro
+  - web
 timestamp: 12/Sep/2026
 title: "Core Web Vitals en 2026: una checklist práctica de rendimiento"
 translationKey: web-performance
