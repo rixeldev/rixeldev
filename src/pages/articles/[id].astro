@@ -10,6 +10,7 @@ import {
 	buildArticleJsonLd,
 	buildBreadcrumbJsonLd,
 	estimateReadingTime,
+	filterArticlesByLocale,
 	findTranslation,
 	formatArticleIsoDate,
 	getRelatedArticles,
@@ -45,7 +46,7 @@ const locale = normalizeLocale(lang)
 const i18n = getI18N({ currentLocale: locale })
 const collection = sortArticlesByDate(await getCollection("articles"))
 const readingMinutes = estimateReadingTime(article.body)
-const relatedArticles = getRelatedArticles(collection, article)
+const relatedArticles = getRelatedArticles(filterArticlesByLocale(collection, locale), article)
 const translation = findTranslation(collection, article)
 
 const canonical = new URL(

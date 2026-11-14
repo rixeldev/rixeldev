@@ -1,14 +1,16 @@
 ---
 import MainTitle from "@/components/MainTitle.astro"
 import UpArrow from "@/icons/UpArrow.astro"
-import { estimateReadingTime, sortArticlesByDate } from "@/libs/articlesSeo"
+import { estimateReadingTime, filterArticlesByLocale, sortArticlesByDate } from "@/libs/articlesSeo"
 import { getActiveLocale, getI18N, resolveLocalizedHref } from "@/locales/index"
 import { getCollection } from "astro:content"
 
 const locale = getActiveLocale(Astro)
 const i18n = getI18N({ currentLocale: locale })
 
-const articles = sortArticlesByDate(await getCollection("articles")).slice(0, 4)
+const articles = sortArticlesByDate(
+	filterArticlesByLocale(await getCollection("articles"), locale)
+).slice(0, 4)
 ---
 
 <div class="flex w-full min-w-0 flex-col">

@@ -1,4 +1,4 @@
-import { resolveLocalizedPath } from "@/locales/index"
+import { normalizeLocale, resolveLocalizedPath } from "@/locales/index"
 import type { CollectionEntry } from "astro:content"
 
 const SITE_URL = "https://rixel.dev"
@@ -45,6 +45,14 @@ export const sortArticlesByDate = (articles: CollectionEntry<"articles">[]) => {
 	return [...articles].sort(
 		(a, b) => parseArticleTimestamp(b.data.timestamp) - parseArticleTimestamp(a.data.timestamp)
 	)
+}
+
+export const filterArticlesByLocale = (
+	articles: CollectionEntry<"articles">[],
+	locale: string
+): CollectionEntry<"articles">[] => {
+	const activeLocale = normalizeLocale(locale)
+	return articles.filter((article) => normalizeLocale(article.data.lang) === activeLocale)
 }
 
 export const estimateReadingTime = (body: string | undefined, wordsPerMinute = 200) => {

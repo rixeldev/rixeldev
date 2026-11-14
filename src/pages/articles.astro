@@ -6,6 +6,7 @@ import type { Preload } from "@/interfaces/preload"
 import {
 	buildArticlesIndexJsonLd,
 	estimateReadingTime,
+	filterArticlesByLocale,
 	resolveCoverUrl,
 	sortArticlesByDate,
 } from "@/libs/articlesSeo"
@@ -21,7 +22,7 @@ import Layout from "../layouts/Layout.astro"
 
 const locale = getActiveLocale(Astro)
 const i18n = getI18N({ currentLocale: locale })
-const articles = sortArticlesByDate(await getCollection("articles"))
+const articles = sortArticlesByDate(filterArticlesByLocale(await getCollection("articles"), locale))
 const orderedArticles = [...articles].sort(
 	(a, b) => Number(Boolean(b.data.featured)) - Number(Boolean(a.data.featured))
 )
